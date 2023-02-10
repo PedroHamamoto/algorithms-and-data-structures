@@ -146,6 +146,9 @@ public class ScratchSinglyLinkedList<T> implements ScratchList<T> {
         return sb.toString();
     }
 
+    /**
+     *<a href="https://leetcode.com/problems/reverse-linked-list/"> LeetCode problem </a>
+     * */
     public void reverse() {
         last = head;
 
