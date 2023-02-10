@@ -10,7 +10,7 @@ class ScratchListBaseTest {
         populate(list);
         assertEquals(11, list.size());
         assertEquals("[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]", list.toString());
-        // 0 1 2 3 5 6 7 8 9
+
         list.remove(10);
         assertEquals(10, list.size());
         assertEquals("[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]", list.toString());
