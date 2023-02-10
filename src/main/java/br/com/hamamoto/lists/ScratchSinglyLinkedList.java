@@ -8,9 +8,13 @@ public class ScratchSinglyLinkedList<T> implements ScratchList<T> {
 
     public static final int EXTRA_COMMA_THRESHOLD = 2;
 
-    private static class Node<T> {
-        private final T data;
+    public static class Node<T> {
+        private T data;
         private Node<T> next;
+
+        public Node() {
+
+        }
 
         public Node(T data) {
             this.data = data;
@@ -36,6 +40,17 @@ public class ScratchSinglyLinkedList<T> implements ScratchList<T> {
 
     public ScratchSinglyLinkedList() {
         this.size = 0;
+    }
+
+    public ScratchSinglyLinkedList(Node<T> head) {
+        this.head = head;
+
+        while (Objects.nonNull(head)) {
+            size++;
+            last = head;
+            head = head.getNext();
+        }
+
     }
 
     @Override
@@ -125,6 +140,10 @@ public class ScratchSinglyLinkedList<T> implements ScratchList<T> {
         return node;
     }
 
+    public Node<T> getHead() {
+        return head;
+    }
+
     @Override
     public String toString() {
         var sb = new StringBuilder();
@@ -147,7 +166,7 @@ public class ScratchSinglyLinkedList<T> implements ScratchList<T> {
     }
 
     /**
-     *<a href="https://leetcode.com/problems/reverse-linked-list/"> LeetCode problem </a>
+     *<a href="https://leetcode.com/problems/reverse-linked-list/"> LeetCode problem </a> - Reverse a linked list
      * */
     public void reverse() {
         last = head;
