@@ -6,7 +6,7 @@ import java.util.Objects;
  *<a href="https://leetcode.com/problems/design-linked-list/"> LeetCode problem </a> - Design a linked list.
  * I opted to design a doubly linked list
  * */
-class MyLinkedList {
+class DoublyLinkedList {
 
     private static class ListNode {
         ListNode next;
@@ -23,7 +23,7 @@ class MyLinkedList {
     private ListNode right;
 
 
-    public MyLinkedList() {
+    public DoublyLinkedList() {
         left = new ListNode(0);
         right = new ListNode(0);
 
