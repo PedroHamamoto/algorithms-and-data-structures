@@ -4,10 +4,10 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 
 /**
- *<a href="https://leetcode.com/problems/number-of-students-unable-to-eat-lunch/description/"> LeetCode problem </a>
+ *<a href="https://leetcode.com/problems/number-of-students-unable-to-eat-lunch"> LeetCode problem </a>
  * - Number of Students Unable to Eat Lunch.
  * */
-class NumberOfStudentsUnableToEatLunch {
+public class NumberOfStudentsUnableToEatLunch {
     public int countStudents(int[] students, int[] sandwiches) {
         Queue<Integer> queue = new ArrayDeque<>();
 
