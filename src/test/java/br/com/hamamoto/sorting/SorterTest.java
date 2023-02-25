@@ -9,4 +9,9 @@ class SorterTest {
         SorterBaseTest.testSorting(new InsertionSorter());
     }
 
+    @Test
+    void shouldPerformMergeSort() {
+        SorterBaseTest.testSorting(new MergeSorter());
+    }
+
 }
