@@ -1,2 +1,2 @@
 # algorithms-and-data-structures
-A simple repository where I commit my recycling study of programming fundamentals with LeetCode problems and implementing data structures from scratch.
+A straightforward repository where I commit my recycling study of programming fundamentals with Leetcode problems and implement data structures from scratch.
