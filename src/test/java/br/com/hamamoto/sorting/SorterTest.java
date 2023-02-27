@@ -14,4 +14,9 @@ class SorterTest {
         SorterBaseTest.testSorting(new MergeSorter());
     }
 
+    @Test
+    void shouldPerformQuickSort() {
+        SorterBaseTest.testSorting(new QuickSorter());
+    }
+
 }
