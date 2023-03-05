@@ -19,4 +19,9 @@ class SorterTest {
         SorterBaseTest.testSorting(new QuickSorter());
     }
 
+    @Test
+    void shouldPerformFooSort() {
+        SorterBaseTest.testSorting(new FooSorter());
+    }
+
 }
