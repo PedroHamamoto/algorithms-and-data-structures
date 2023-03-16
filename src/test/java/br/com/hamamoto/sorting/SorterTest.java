@@ -20,8 +20,8 @@ class SorterTest {
     }
 
     @Test
-    void shouldPerformFooSort() {
-        SorterBaseTest.testSorting(new FooSorter());
+    void shouldPerformCountingSort() {
+        SorterBaseTest.testSorting(new CountingSorter());
     }
 
 }

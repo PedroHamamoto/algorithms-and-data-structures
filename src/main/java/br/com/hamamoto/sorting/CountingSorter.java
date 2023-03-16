@@ -3,8 +3,7 @@ package br.com.hamamoto.sorting;
 import java.util.Map;
 import java.util.TreeMap;
 
-// I'm still searching the appropriate name of this algorithm in literature
-public class FooSorter implements Sorter {
+public class CountingSorter implements Sorter {
     @Override
     public void sort(int[] arr) {
         Map<Integer, Integer> map = new TreeMap<>();
