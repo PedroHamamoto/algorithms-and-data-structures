@@ -1,4 +1,4 @@
-package br.com.hamamoto;
+package br.com.hamamoto.binary_tree;
 
 import java.util.Objects;
 
