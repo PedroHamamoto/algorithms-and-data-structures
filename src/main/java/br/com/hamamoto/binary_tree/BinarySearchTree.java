@@ -59,6 +59,34 @@ class BinarySearchTree {
         }
     }
 
+    /**
+     *<a href="https://leetcode.com/problems/delete-node-in-a-bst/"> LeetCode problem </a> - Delete a node in BST
+     * */
+    public TreeNode remove(TreeNode root, int key) {
+        if (Objects.isNull(root)) {
+            return null;
+        }
+
+        if (key > root.val) {
+            root.right = remove(root.right, key);
+        } else if (key < root.val) {
+            root.left = remove(root.left, key);
+        } else {
+            if (Objects.isNull(root.left)) {
+                return root.right;
+            } else if (Objects.isNull(root.right)) {
+                return root.left;
+            } else {
+                var minimum = getMin(root.right);
+                root.val = minimum.val;
+
+                root.right = remove(root.right, minimum.val);
+            }
+        }
+
+        return root;
+    }
+
     public TreeNode getMin(TreeNode root) {
         while (Objects.nonNull(root) && Objects.nonNull(root.left)) {
             root = root.left;
