@@ -1,6 +1,7 @@
 package br.com.hamamoto.binary_tree;
 
 import java.util.Objects;
+import java.util.Random;
 
 class BinarySearchTree {
 
@@ -56,5 +57,21 @@ class BinarySearchTree {
         } else {
             return node;
         }
+    }
+
+    public TreeNode getMin(TreeNode root) {
+        while (Objects.nonNull(root) && Objects.nonNull(root.left)) {
+            root = root.left;
+        }
+
+        return root;
+    }
+
+    public TreeNode getMax(TreeNode root) {
+        while (Objects.nonNull(root) && Objects.nonNull(root.right)) {
+            root = root.right;
+        }
+
+        return root;
     }
 }
