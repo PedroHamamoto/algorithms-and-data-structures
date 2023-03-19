@@ -1,5 +1,7 @@
 package br.com.hamamoto.binary_tree;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
@@ -79,12 +81,31 @@ class BinarySearchTree {
             } else {
                 var minimum = getMin(root.right);
                 root.val = minimum.val;
-
                 root.right = remove(root.right, minimum.val);
             }
         }
 
         return root;
+    }
+
+    /**
+     *<a href="https://leetcode.com/problems/binary-tree-inorder-traversal"> LeetCode problem </a>
+     * - Binary tree inorder traversal
+     * */
+    public List<Integer> inorderTraversal(TreeNode root) {
+        return inorder(root, new ArrayList<Integer>());
+    }
+
+    private List<Integer> inorder(TreeNode root, List<Integer> traversed) {
+        if (Objects.isNull(root)) {
+            return traversed;
+        }
+
+        inorder(root.left, traversed);
+        traversed.add(root.val);
+        inorder(root.right, traversed);
+
+        return traversed;
     }
 
     public TreeNode getMin(TreeNode root) {
