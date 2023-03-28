@@ -59,8 +59,8 @@ class BinarySearchTree {
     }
 
     /**
-     *<a href="https://leetcode.com/problems/delete-node-in-a-bst/"> LeetCode problem </a> - Delete a node in BST
-     * */
+     * <a href="https://leetcode.com/problems/delete-node-in-a-bst/"> LeetCode problem </a> - Delete a node in BST
+     */
     public TreeNode remove(TreeNode root, int key) {
         if (Objects.isNull(root)) {
             return null;
@@ -86,9 +86,9 @@ class BinarySearchTree {
     }
 
     /**
-     *<a href="https://leetcode.com/problems/binary-tree-inorder-traversal"> LeetCode problem </a>
+     * <a href="https://leetcode.com/problems/binary-tree-inorder-traversal"> LeetCode problem </a>
      * - Binary tree inorder traversal
-     * */
+     */
     public List<Integer> inorderTraversal(TreeNode root) {
         return inorder(root, new ArrayList<Integer>());
     }
@@ -122,13 +122,13 @@ class BinarySearchTree {
     }
 
     /**
-     *<a href="https://leetcode.com/problems/binary-tree-level-order-traversal"> LeetCode problem </a>
+     * <a href="https://leetcode.com/problems/binary-tree-level-order-traversal"> LeetCode problem </a>
      * - Binary tree level order traversal
-     * */
+     */
     public List<List<Integer>> levelOrderTraversal(TreeNode root) {
         var levels = new ArrayList<List<Integer>>();
 
-        Deque<TreeNode> queue = new ArrayDeque<TreeNode>();
+        Deque<TreeNode> queue = new ArrayDeque<>();
 
         if (Objects.nonNull(root))
             queue.add(root);
@@ -152,6 +152,34 @@ class BinarySearchTree {
         }
 
         return levels;
+    }
 
+    /**
+     * <a href="https://leetcode.com/problems/binary-tree-right-side-view"> LeetCode problem </a>
+     * - Binary tree right side view
+     */
+    public List<Integer> rightSideView(TreeNode root) {
+        var rightSide = new ArrayList<Integer>();
+
+        Deque<TreeNode> queue = new ArrayDeque<>();
+
+        if (Objects.nonNull(root))
+            queue.add(root);
+
+        while (!queue.isEmpty()) {
+            var levelLength = queue.size();
+            rightSide.add(queue.peekLast().val);
+
+            for (int i = 0; i < levelLength; i++) {
+                var current = queue.removeFirst();
+
+                if (Objects.nonNull(current.left))
+                    queue.add(current.left);
+                if (Objects.nonNull(current.right))
+                    queue.add(current.right);
+            }
+        }
+
+        return rightSide;
     }
 }
