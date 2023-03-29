@@ -1,6 +1,6 @@
 package br.com.hamamoto.binary_tree;
 
-import java.util.*;
+import java.util.Objects;
 
 class BinarySearchTree {
 
@@ -85,26 +85,6 @@ class BinarySearchTree {
         return root;
     }
 
-    /**
-     * <a href="https://leetcode.com/problems/binary-tree-inorder-traversal"> LeetCode problem </a>
-     * - Binary tree inorder traversal
-     */
-    public List<Integer> inorderTraversal(TreeNode root) {
-        return inorder(root, new ArrayList<Integer>());
-    }
-
-    private List<Integer> inorder(TreeNode root, List<Integer> traversed) {
-        if (Objects.isNull(root)) {
-            return traversed;
-        }
-
-        inorder(root.left, traversed);
-        traversed.add(root.val);
-        inorder(root.right, traversed);
-
-        return traversed;
-    }
-
     public TreeNode getMin(TreeNode root) {
         while (Objects.nonNull(root) && Objects.nonNull(root.left)) {
             root = root.left;
@@ -119,67 +99,5 @@ class BinarySearchTree {
         }
 
         return root;
-    }
-
-    /**
-     * <a href="https://leetcode.com/problems/binary-tree-level-order-traversal"> LeetCode problem </a>
-     * - Binary tree level order traversal
-     */
-    public List<List<Integer>> levelOrderTraversal(TreeNode root) {
-        var levels = new ArrayList<List<Integer>>();
-
-        Deque<TreeNode> queue = new ArrayDeque<>();
-
-        if (Objects.nonNull(root))
-            queue.add(root);
-
-        while (!queue.isEmpty()) {
-            var level = new ArrayList<Integer>();
-
-            var levelLength = queue.size();
-
-            for (int i = 0; i < levelLength; i++) {
-                var current = queue.removeFirst();
-                level.add(current.val);
-
-                if (Objects.nonNull(current.left))
-                    queue.add(current.left);
-                if (Objects.nonNull(current.right))
-                    queue.add(current.right);
-            }
-
-            levels.add(level);
-        }
-
-        return levels;
-    }
-
-    /**
-     * <a href="https://leetcode.com/problems/binary-tree-right-side-view"> LeetCode problem </a>
-     * - Binary tree right side view
-     */
-    public List<Integer> rightSideView(TreeNode root) {
-        var rightSide = new ArrayList<Integer>();
-
-        Deque<TreeNode> queue = new ArrayDeque<>();
-
-        if (Objects.nonNull(root))
-            queue.add(root);
-
-        while (!queue.isEmpty()) {
-            var levelLength = queue.size();
-            rightSide.add(queue.peekLast().val);
-
-            for (int i = 0; i < levelLength; i++) {
-                var current = queue.removeFirst();
-
-                if (Objects.nonNull(current.left))
-                    queue.add(current.left);
-                if (Objects.nonNull(current.right))
-                    queue.add(current.right);
-            }
-        }
-
-        return rightSide;
     }
 }
