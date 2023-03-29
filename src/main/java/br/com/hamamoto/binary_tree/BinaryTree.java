@@ -6,8 +6,8 @@ public class BinaryTree {
 
     static class TreeNode {
         int val;
-        BinarySearchTree.TreeNode left;
-        BinarySearchTree.TreeNode right;
+        TreeNode left;
+        TreeNode right;
 
         TreeNode() {
         }
@@ -16,7 +16,7 @@ public class BinaryTree {
             this.val = val;
         }
 
-        TreeNode(int val, BinarySearchTree.TreeNode left, BinarySearchTree.TreeNode right) {
+        TreeNode(int val, TreeNode left, TreeNode right) {
             this.val = val;
             this.left = left;
             this.right = right;
