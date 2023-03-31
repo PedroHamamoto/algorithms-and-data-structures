@@ -12,7 +12,7 @@ class SubsetsGenerator {
         List<List<Integer>> subsets = new ArrayList<List<Integer>>();
         generateSubsets(0, nums, new ArrayList<Integer>(), subsets);
 
-        return subsets;    
+        return subsets;
     }
 
     void generateSubsets(int index, int[] nums, List<Integer> current, List<List<Integer>> subsets) {
@@ -27,6 +27,4 @@ class SubsetsGenerator {
         }
 
     }
-
-    
 }
