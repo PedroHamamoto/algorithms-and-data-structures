@@ -7,7 +7,7 @@ public class LongestStringWithoutRepeatingCharacters {
      * LeetCode problem </a> - Longest String Without Repeating Characters
      * */
    public int lengthOfLongestSubstring(String s) {
-        var appeared  = new boolean[128];
+        var visited  = new boolean[128];
         int left = 0;
         int right = 0;
 
@@ -16,16 +16,14 @@ public class LongestStringWithoutRepeatingCharacters {
         while (right < s.length()) {
             char c = s.charAt(right);
 
-            if (appeared[c]) {
-                appeared[s.charAt(left)] = false;
+            if (visited[c]) {
+                visited[s.charAt(left)] = false;
                 left++;
             } else {
-                appeared[c] = true;
+                visited[c] = true;
                 right++;
                 longest = Math.max(longest, right - left);
             }
-
-
         }
 
         return longest;
