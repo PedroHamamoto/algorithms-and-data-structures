@@ -2,7 +2,7 @@ package br.com.hamamoto.two_pointers;
 
 /**
  *<a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-II"> LeetCode problem </a>
- * - Best time to buy and sell stock
+ * - Best Time to Buy and Sell II
  * */
 public class BestTimeToBuyAndSellStockII {
     public int maxProfit(int[] prices) {
