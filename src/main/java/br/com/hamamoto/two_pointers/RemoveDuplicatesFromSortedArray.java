@@ -2,7 +2,7 @@ package br.com.hamamoto.two_pointers;
 public class RemoveDuplicatesFromSortedArray {
 
     /**
-     *<a href="https://leetcode.com/problems/q"> LeetCode problem </a>
+     *<a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array"> LeetCode problem </a>
      * - Remove Duplicates  from Sorted Array
      * */
     public int removeDuplicates(int[] nums) {
