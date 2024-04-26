@@ -11,10 +11,8 @@ public class BestTimeToBuyAndSellStock {
         int maxProfit = 0;
 
         while (right < prices.length) {
-            int currentProfit = prices[right] - prices[left];
-
-            if (currentProfit > 0) {
-                maxProfit = Math.max(maxProfit, currentProfit);
+            if (prices[left] < prices[right]) {
+                maxProfit = Math.max(maxProfit, prices[right] - prices[left]);
             } else {
                 left = right;
             }
