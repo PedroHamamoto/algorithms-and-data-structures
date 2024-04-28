@@ -1,7 +1,7 @@
 package br.com.hamamoto.two_pointers;
 
 /**
- * <a href="https://leetcode.com/problems/container-with-most-water/description> LeetCode problem </a>
+ * <a href="https://leetcode.com/problems/container-with-most-water> LeetCode problem </a>
  * - Container With Most Water
  */
 public class ContainerWithMostWater {
