@@ -3,8 +3,8 @@ package br.com.hamamoto.hash_mapping;
 import java.util.HashMap;
 
 /**
- * <a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted> LeetCode problem </a>
- * - Two Sum II - Input Array Is Sorted
+ * <a href="https://leetcode.com/problems/two-sum> LeetCode problem </a>
+ * - Two Sum
  */
 public class TwoSum {
 
