@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 /**
  * <a href="https://leetcode.com/problems/word-pattern> LeetCode problem </a>
- * - Container With Most Water
+ * - Word Pattern
  */
 public class WordPattern {
 
