@@ -3,30 +3,31 @@ package br.com.hamamoto.binary_tree;
 
 import java.util.Arrays;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
-
 /**
  *<a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/"> LeetCode problem </a>
  * - Construct Binary Tree from Preorder and Inorder Traversal
  * */
 class TreeBuilder {
+
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
+
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         if (preorder.length == 0 || inorder.length == 0)
             return null;
