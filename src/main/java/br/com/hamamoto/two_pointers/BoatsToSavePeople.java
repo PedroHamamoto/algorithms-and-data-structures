@@ -2,6 +2,10 @@ package br.com.hamamoto.two_pointers;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.com/problems/boats-to-save-people> LeetCode problem </a>
+ * - Boats to Save People
+ */
 public class BoatsToSavePeople {
 
     public int numRescueBoats(int[] people, int limit) {
